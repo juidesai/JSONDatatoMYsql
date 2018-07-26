@@ -43,7 +43,7 @@ public class InsertData {
 
         Class.forName("com.mysql.jdbc.Driver");
         Connection con=DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/stock?autoReconnect=true&useSSL=false","root","Amita1995jmd@");
+                "jdbc:mysql://localhost:3306/stock?autoReconnect=true&useSSL=false","root","");
         PreparedStatement pstmt=con.prepareStatement("INSERT INTO STOCKLIST(SYMBOL,PRICE,VOLUME,DATE) VALUES(?,?,?,?)");
         for(StockModel stocks:stockdetail){
             pstmt.setString(1, stocks.getSymbol());
